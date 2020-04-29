@@ -4,26 +4,90 @@
     box-sizing: border-box;
 }
 
-nav .nav-top {
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+nav {
+    position: relative;
+}
+
+.nav-top{
+    padding: 0 20px;
+}
+
+.nav-bottom {
+    padding-left: 20px;
+}
+
+.nav-top {
     height: 32px;
-    background: grey;
-    
+    background: #000;
 }
 
 .nav-bottom {
     height: 48px;
-    width: 100%;
     display: block;
 }
 
 .nav-logo {
     display: none;
     width: 106px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+nav ul li {
     float: left;
 }
 
-nav ul {
-    display: none;
+nav ul li a {
+    text-decoration: none;
+    color: rgb(161, 161, 161);
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+nav .right {
+    float: right;
+}
+
+.nav-top ul li {
+    line-height: 32px;
+    margin: 0 6px;
+    font-size: 13px;
+}
+
+.nav-bottom ul li {
+    line-height: 48px;
+    margin: 0 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav-bottom ul li a:hover {
+    color: #000;
+}
+
+.nav-top ul li:first-child,
+.nav-bottom ul li:first-child {
+    margin-left: 0;
+}
+
+.nav-top .right li:last-child {
+    margin-right: 0;
+}
+
+nav .left li:first-child {
+    font-weight: bold;
+    color: #fff;
+}
+
+nav .left li:first-child a {
+    color: #fff;
 }
 
 .nav-logo a {
@@ -150,6 +214,11 @@ footer .copyright {
         display: block;
     }
 
+    nav .nav-top,
+    nav .nav-bottom {
+        margin-left: 106px;
+    }
+    
     .wrapper .latest ul li {
         height: 300px;
         flex-basis: 33.333%;
