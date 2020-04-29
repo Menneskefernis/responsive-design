@@ -94,7 +94,7 @@ nav .nav-right .nav-toggle {
     background: indigo;
 }
 
-.cover--grid3 article:first-child {
+.cover--grid3 .promoted {
     width: 66.666%;
     height: 100%;
     background: rgb(71, 158, 71);
@@ -112,12 +112,17 @@ nav .nav-right .nav-toggle {
     margin: 60px 0;
 }
 
-.wrapper .col-4 {
+.wrapper .latest ul li {
     height: 300px;
     flex-basis: 25%;
 }
 
-.wrapper .col-3 {
+.wrapper .deals ul li {
+    height: 300px;
+    flex-basis: 25%;
+}
+
+.wrapper .sections section {
     height: 500px;
     flex-basis: 33.333%;
 }
@@ -144,6 +149,25 @@ footer .copyright {
     .nav-logo {
         display: block;
     }
+
+    .wrapper .latest ul li {
+        height: 300px;
+        flex-basis: 33.333%;
+    }
+
+    .wrapper .deals ul li {
+        height: 300px;
+        flex-basis: 33.333%;
+    }
+
+    .wrapper .deals ul li:last-child {
+        display: none;
+    }
+
+    .wrapper .sections section {
+        height: 500px;
+        flex-basis: 50%;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -157,5 +181,32 @@ footer .copyright {
 
     nav .nav-right .nav-toggle {
         display: inline-block;
+    }
+
+    .cover--grid3 {
+        height: initial;
+        max-height: initial;
+    }
+
+    .cover--grid3 .cover-story {
+        width: 100%;
+        height: 40vh;
+        float: none;
+        background: rgb(71, 158, 71);
+    }
+
+    .wrapper .latest ul li {
+        height: 100px;
+        flex-basis: 100%;
+    }
+
+    .wrapper .deals ul li {
+        height: 300px;
+        flex-basis: 100%;
+    }
+
+    .wrapper .sections section {
+        height: 500px;
+        flex-basis: 100%;
     }
 }
