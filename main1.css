@@ -6,6 +6,11 @@
 
 body {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    background: #f8f8f8;
+}
+
+a {
+    text-decoration: none;
 }
 
 nav {
@@ -28,6 +33,7 @@ nav {
 .nav-bottom {
     height: 48px;
     display: block;
+    background: #fff;
 }
 
 .nav-logo {
@@ -38,12 +44,27 @@ nav {
     left: 0;
 }
 
+.nav-logo a {
+    display: block;
+    background-color: #f42;
+    background: linear-gradient(to bottom right, #c09, #f42 85%);
+    width: 106px;
+    height: 80px;
+    padding: 16px 20px;
+}
+
+.nav-logo img {
+    width: 66px;
+    height: 100%;
+    position: relative;
+    display: block;
+}
+
 nav ul li {
     float: left;
 }
 
 nav ul li a {
-    text-decoration: none;
     color: rgb(161, 161, 161);
 }
 
@@ -90,26 +111,11 @@ nav .left li:first-child a {
     color: #fff;
 }
 
-.nav-logo a {
-    display: block;
-    background-color: #f42;
-    background: linear-gradient(to bottom right, #c09, #f42 85%);
-    width: 106px;
-    height: 80px;
-    padding: 16px 20px;
-}
-
-.nav-logo img {
-    width: 66px;
-    height: 100%;
-    position: relative;
-    display: block;
-}
-
 nav .nav-right {
     position: relative;
     float: right;
-    display: block;
+    display: flex;
+    text-align: center;
     height: 100%;
 }
 
@@ -117,19 +123,22 @@ nav .nav-right >* {
     height: 100%;
     width: 48px;
     position: relative;
-    background: green;
     display: inline-block;
-    border-left: 1px solid grey;
+    border-left: 1px solid #f8f8f8;
+}
+
+nav .nav-right i {
+    display: block;
+    line-height: 48px;
+    color: rgb(161, 161, 161);
+    transform: scaleX(-1);
 }
 
 nav .nav-right .nav-toggle {
     display: none;
 }
 
-.cover--grid3 {
-    height: 75vh;
-    max-height: 560px;
-}
+/* cover area */
 
 .cover {
     padding: 4px;
@@ -137,31 +146,68 @@ nav .nav-right .nav-toggle {
     position: relative;
 }
 
-.cover-story {
+.cover--grid3 {
+    margin-top: 30px;
+    height: 75vh;
+    max-height: 560px;
+}
+
+.cover--grid3 h2 {
+    font-family: 'Coda Caption', sans-serif;
+    color: #fff;
+}
+
+.cover--grid3 .cover-story {
+    width: 33.333%;
+    height: 50%;
+    float: left;
     padding: 4px;
     position: relative;
     overflow: hidden;
 }
 
-.cover--grid3 article {
-    width: 33.333%;
-    height: 50%;
-    float: left;
+.cover--grid3 .cover-story h2 {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 30px;
+    line-height: 1.25;
+    font-size: 20px;
 }
 
-/* DELETE */
-.cover--grid3 article:nth-child(2) {
-    background: hotpink;
+.cover--grid3 .promoted img {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 400px;
 }
 
-.cover--grid3 article:nth-child(3) {
-    background: indigo;
+.cover--grid3 .promoted h2 {
+    bottom: 40px;
+    font-size: 40px;
+
 }
 
 .cover--grid3 .promoted {
     width: 66.666%;
     height: 100%;
-    background: rgb(71, 158, 71);
+}
+
+.cover--grid3 .cover-story div {
+    width: 100%;
+    height: 100%;
+}
+
+.cover--grid3 .promoted div {
+    background: url('images/Microsoft2-796x530.jpg') center/cover;
+}
+
+.cover--grid3 .story-2 div {
+    background: url('images/rbcc-web_ad-feature_img-1.jpg') center/cover;
+}
+
+.cover--grid3 .story-3 div {
+    background: url('images/1-40-796x417.jpg') center/cover;
 }
 
 .wrapper {
@@ -237,6 +283,24 @@ footer .copyright {
         height: 500px;
         flex-basis: 50%;
     }
+
+    .cover--grid3 .promoted img {
+        display: none;
+    }
+
+    .cover--grid3 .cover-story h2 {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        line-height: 1.25;
+        font-size: 16px;
+    }
+    
+    .cover--grid3 .promoted h2 {
+        bottom: 30px;
+        font-size: 32px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -252,6 +316,10 @@ footer .copyright {
         display: inline-block;
     }
 
+    nav .nav-bottom ul {
+        display: none;
+    }
+
     .cover--grid3 {
         height: initial;
         max-height: initial;
@@ -259,9 +327,13 @@ footer .copyright {
 
     .cover--grid3 .cover-story {
         width: 100%;
-        height: 40vh;
+        height: 310px;
         float: none;
-        background: rgb(71, 158, 71);
+    }
+
+    .cover--grid3 .promoted h2 {
+        bottom: 20px;
+        font-size: 16px;
     }
 
     .wrapper .latest ul li {
