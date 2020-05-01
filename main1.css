@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    background: #f8f8f8;
+    background: #fff;
 }
 
 a {
@@ -227,7 +227,7 @@ nav .nav-right .nav-toggle {
     margin-left: 10px;
 }
 
-.wrapper img {
+.wrapper .latest img {
     width: 100%;
 }
 
@@ -335,16 +335,80 @@ nav .nav-right .nav-toggle {
 }
 
 .wrapper .sections section {
-    height: 500px;
-    flex-basis: 33.333%;
+    flex-basis: calc(33.333% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.wrapper .u-row >*:nth-child(odd) {
-    background: lemonchiffon;
+.sections .section-cover {
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
 }
 
-.wrapper .u-row >*:nth-child(even) {
-    background: lightcyan;
+.sections .section-cover img {
+    width: 100%;
+}
+
+.sections .section-cover h3 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.25;
+    color: #fff;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 20px;
+}
+
+.sections .section-latest {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    background: #fff4f1;
+    padding: 10px 0 10px 10px;
+    width: 100%;
+}
+
+.sections .section-latest h4 {
+   font-weight: bold;
+   color: rgb(212, 103, 0);
+   line-height: 1.25;
+   font-size: 15px;
+}
+
+.sections .section-latest img {
+    display: block;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.sections ul li {
+    font-size: 13px;
+    line-height: 1.5;
+    position: relative;
+    border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+.sections ul li a:before {
+    content: '';
+    background: rgb(212, 103, 0);
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    display: block;
+    border-radius: 50%;
+}
+
+.sections ul li a {
+    display: block;
+    padding: 7px 0 7px 14px;
+    color: grey;
 }
 
 footer .social {
@@ -380,8 +444,7 @@ footer .copyright {
     }
 
     .wrapper .sections section {
-        height: 500px;
-        flex-basis: 50%;
+        flex-basis: calc(50% - 20px);
     }
 
     .cover--grid3 .promoted img {
@@ -472,8 +535,11 @@ footer .copyright {
         flex-basis: 100%;
     }
 
+    .wrapper .sections .section-latest {
+        justify-content: space-between;
+    }
+
     .wrapper .sections section {
-        height: 500px;
         flex-basis: 100%;
     }
 }
